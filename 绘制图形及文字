@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<graphics.h>
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	//创建一个窗口
+	initgraph(640,480);
+	setbkcolor(BLUE);
+	cleardevice();
+	setfillcolor(YELLOW);
+	setlinestyle(PS_SOLID,5);
+	circle(20, 20, 10);
+	fillcircle(50, 50, 10);//有边框圆
+	solidcircle(80,80, 10);
+
+	//绘制文字
+	settextcolor(RED);
+	settextstyle(200, 0, "楷体");//设置文字样式
+	setbkmode(TRANSPARENT);//设置文字背景为父级，类似透明
+	outtextxy(30, 30, "FFISHER");
+	getchar();
+	//关闭窗口
+	closegraph();
+	return  0;
+}
